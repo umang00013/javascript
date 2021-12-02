@@ -1,0 +1,104 @@
+<html>
+    <head>
+        <title>Assignment 6-</title>
+        
+        <style type="text/css">
+            table
+            {
+                display: none;
+            }
+        </style>
+        <style>
+           
+
+body{ height: 680px; margin: 0px; padding: 10px; text-align: center; border: 2px solid #033371; border-radius: 15px; -moz-border-radius: 15px; background-color: darkgrey;  -webkit-border-radius: 15px;}
+
+p { display: table-row;}
+
+label { margin-left: 40px; display: table-cell; width: 120px; text-align: center; }
+
+    input { margin-bottom: 5px; display: table-cell; padding:5px; border:1px solid #999;border-radius:4px; -moz-border-radius:4px;-web-kit-border-radius:4px;-khtml-border-radius:4px;
+
+        }
+
+button{ background-color: #bde2f9; font-weight: 600;}
+
+table, th { border: 1px solid black; background-position: center;}
+
+td{font-weight:heavy; width:160px; color:red; text-align: center;}
+
+
+
+
+        </style>
+    </head>
+    
+    <body>
+        <table  cellpadding ="8" width="600" style="border: 1px; background-color: coral;text-align: center; margin-left: 250px;">
+        
+            <div style="text-align: center;">
+            
+               
+            
+                    <h1> Registration Form</h1>
+          
+        
+        <form action="regform">
+            <label for="username">Name: </label>
+            <input type="text" id="uname">
+            <br>
+            
+            <label for="education">Education: </label>
+            <input type="text" id="edu">
+            <br>
+
+            
+
+            <label for="dob">DOB: </label>
+            <input type="date" id="dob">
+            <br>
+            
+            <label for="cont">Contact no: </label>
+            <input type="text" id="cont">
+            <br>
+
+            <input type="button" id="submit" value="Submit">
+            <br>
+        </form>
+        
+        <table id="table" border="2">
+            <tr>
+                <th>Name</th>
+                <th>Education</th>
+               
+                <th>DOB</th>
+                <th>Contact</th>
+            </tr>
+        </table>
+    
+        <script type="text/javascript">
+
+document.getElementById("submit").onclick=function()
+            {
+                document.getElementById("table").style.display="block";
+                
+                var table = document.getElementById("table");
+                var row = table.insertRow(-1);
+                var uname = row.insertCell(0);
+                var edu = row.insertCell(1);
+                var dob = row.insertCell(2);
+                var cont = row.insertCell(3);
+                uname.innerHTML = document.getElementById("uname").value;
+                edu.innerHTML = document.getElementById("edu").value;
+              
+              dob.innerHTML = document.getElementById("dob").value; 
+              cont.innerHTML = document.getElementById("cont").value;
+                return false;
+            }
+        
+        </script>
+        </div>
+        
+        </table>
+    </body>
+</html>
